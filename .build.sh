@@ -9,4 +9,4 @@ chmod -R u=rwx,go= bin/*
 # real app id (default/app.conf [package] id, package.json name).
 APPDIR="$(basename "$PWD")"
 cd ..
-tar -cpzf $OUTPUT --exclude=.* --overwrite --transform "s,^$APPDIR,deleter," "$APPDIR"
+tar -cpzf $OUTPUT --exclude=.* --exclude=AGENTS.md --exclude=CLAUDE.md --overwrite --transform "s,^$APPDIR,deleter," "$APPDIR"
